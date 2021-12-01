@@ -1050,12 +1050,14 @@ struct edict_s
 	float		damage_debounce_time;
 	float		fly_sound_debounce_time;	//move to clientinfo
 	float		last_move_time;
-
 	int			health;
 	int			max_health;
 	int			gib_health;
 	int			deadflag;
 	qboolean	show_hostile;
+
+	//money variable
+	int money;
 
 	float		powerarmor_time;
 

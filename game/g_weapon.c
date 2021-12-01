@@ -98,7 +98,9 @@ qboolean fire_hit (edict_t *self, vec3_t aim, int damage, int kick)
 			return false;
 		// if it will hit any client/monster then hit the one we wanted to hit
 		if ((tr.ent->svflags & SVF_MONSTER) || (tr.ent->client))
+		{
 			tr.ent = self->enemy;
+		}
 	}
 
 	AngleVectors(self->s.angles, forward, right, up);
@@ -326,6 +328,7 @@ void blaster_touch (edict_t *self, edict_t *other, cplane_t *plane, csurface_t *
 		else
 			mod = MOD_BLASTER;
 		T_Damage (other, self, self->owner, self->velocity, self->s.origin, plane->normal, self->dmg, 1, DAMAGE_ENERGY, mod);
+		self->owner->money += 3;
 	}
 	else
 	{

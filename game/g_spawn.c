@@ -701,6 +701,16 @@ char *single_statusbar =
 "	xv	148 "
 "	pic	11 "
 "endif "
+
+//money variable on hud
+"if 18 "
+"	xv 210 "
+"   xv 210 "
+"      num 4   18 "
+"   xv 234 "
+"   yb -59 "
+"   string MONEY "
+"endif "
 ;
 
 char *dm_statusbar =
