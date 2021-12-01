@@ -1,7 +1,5 @@
 ﻿  g_weapon.c
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_weapon.c(458,68): warning C4100: 'plane': unreferenced formal parameter
-  p_weapon.c
-  Generating Code...
+C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_weapon.c(464,68): warning C4100: 'plane': unreferenced formal parameter
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetPath(C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\release\game.dll) does not match the Linker's OutputFile property value (C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\release\gamex86.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1365,5): warning MSB8012: TargetName(game) does not match the Linker's OutputFile property value (gamex86). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      Creating library .\..\release\gamex86.lib and object .\..\release\gamex86.exp
