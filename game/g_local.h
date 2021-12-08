@@ -1059,6 +1059,18 @@ struct edict_s
 	//money variable
 	int money;
 
+	//weapons buy variables
+	int bought_sgun;
+	int bought_supersgun;
+	int bought_mgun;
+	int bought_cgun;
+	int bought_hblaster;
+	int bought_rlauncher;
+	int bought_glauncher;
+	int bought_rgun;
+	int bought_bfg;
+	
+
 	float		powerarmor_time;
 
 	char		*map;			// target_changelevel

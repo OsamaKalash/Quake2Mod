@@ -24,6 +24,11 @@ void ClientUserinfoChanged (edict_t *ent, char *userinfo);
 
 void SP_misc_teleporter_dest (edict_t *ent);
 
+void SP_monster_berserk(edict_t* self);
+
+//frame count
+int fcount = 0;
+
 //
 // Gross, ugly, disgustuing hack section
 //
@@ -1574,7 +1579,7 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 	edict_t	*other;
 	int		i, j;
 	pmove_t	pm;
-
+	
 	level.current_entity = ent;
 	client = ent->client;
 
@@ -1742,6 +1747,19 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 		if (other->inuse && other->client->chase_target == ent)
 			UpdateChaseCam(other);
 	}
+
+	//gives money per second
+	
+	if (fcount == 300)
+	{
+		ent->money += 20;
+		fcount = 0;
+	}
+	else {
+		fcount++;
+	}
+	
+	
 }
 
 

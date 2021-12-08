@@ -599,7 +599,8 @@ void SpawnEntities (char *mapname, char *entities, char *spawnpoint)
 			ent->spawnflags &= ~(SPAWNFLAG_NOT_EASY|SPAWNFLAG_NOT_MEDIUM|SPAWNFLAG_NOT_HARD|SPAWNFLAG_NOT_COOP|SPAWNFLAG_NOT_DEATHMATCH);
 		}
 
-		ED_CallSpawn (ent);
+
+		ED_CallSpawn(ent);
 	}	
 
 	gi.dprintf ("%i entities inhibited\n", inhibit);
@@ -990,5 +991,7 @@ void SP_worldspawn (edict_t *ent)
 
 	// 63 testing
 	gi.configstring(CS_LIGHTS+63, "a");
+
+	
 }
 
