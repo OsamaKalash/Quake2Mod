@@ -20,7 +20,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "g_local.h"
 #include "m_player.h"
 
-//setting bought variables to 0 for false
+//setting weapon bought variables to 0 for false
 bought_sgun = 0;
 bought_supersgun = 0;
 bought_mgun = 0;
@@ -30,6 +30,13 @@ bought_rlauncher = 0;
 bought_glauncher = 0;
 bought_rgun = 0;
 bought_bfg = 0;
+
+//strogg bought variables
+bought_infantry = 0;
+bought_soldier = 0;
+bought_berserk = 0;
+bought_tank = 0;
+bought_gunner = 0;
 
 char *ClientTeam (edict_t *ent)
 {
@@ -909,176 +916,273 @@ void Cmd_PlayerList_f(edict_t *ent)
 	gi.cprintf(ent, PRINT_HIGH, "%s", text);
 }
 
+//buy command for guns and strogg
 void Cmd_Buy(edict_t *ent)
 {
 	char* arg;
 	arg = gi.args();
 
+	//shotgun
 	if (Q_stricmp(arg, "shotgun") == 0) {
-
-		if (bought_sgun == 1) {
+		if (ent->bought_sgun == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_sgun == 0)
+		else if (ent->bought_sgun == 0)
 		{
 			if (ent->money >= 10) {
 				ent->money -= 10;
-				bought_sgun = 1;
+				ent->bought_sgun = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought shotugn\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $10!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $10!\n");
 			}
 		}
 	}
+	//super shotgun 
 	else if (Q_stricmp(arg, "super shotgun") == 0) {
-
-		if (bought_supersgun == 1) {
+		if (ent->bought_supersgun == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_supersgun == 0)
+		else if (ent->bought_supersgun == 0)
 		{
 			if (ent->money >= 20) {
 				ent->money -= 20;
-				bought_supersgun = 1;
+				ent->bought_supersgun = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought super shotugn\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $20!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $20!\n");
 			}
 		}
 	}
+	//machinegun
 	else if (Q_stricmp(arg, "machinegun") == 0) {
-
-		if (bought_mgun == 1) {
+		if (ent->bought_mgun == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_mgun == 0)
+		else if (ent->bought_mgun == 0)
 		{
 			if (ent->money >= 30) {
 				ent->money -= 30;
-				bought_mgun = 1;
+				ent->bought_mgun = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought machinegun\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $30!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $30!\n");
 			}
 		}
 	}
+	//chaingun
 	else if (Q_stricmp(arg, "chaingun") == 0) {
 
-		if (bought_cgun == 1) {
+		if (ent->bought_cgun == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_cgun == 0)
+		else if (ent->bought_cgun == 0)
 		{
 			if (ent->money >= 40) {
 				ent->money -= 40;
-				bought_cgun = 1;
+				ent->bought_cgun = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought chaingun\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $40!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $40!\n");
 			}
 		}
 	}
+	//hyperblaster
 	else if (Q_stricmp(arg, "hyperblaster") == 0) {
 
-		if (bought_hblaster == 1) {
+		if (ent->bought_hblaster == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_hblaster == 0)
+		else if (ent->bought_hblaster == 0)
 		{
 			if (ent->money >= 50) {
 				ent->money -= 50;
-				bought_hblaster = 1;
+				ent->bought_hblaster = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought hyperblaster\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $50!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $50!\n");
 			}
 		}
 	}
+	//rocket launcher
 	else if (Q_stricmp(arg, "rocket launcher") == 0) {
 
-		if (bought_rlauncher == 1) {
+		if (ent->bought_rlauncher == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_rlauncher == 0)
+		else if (ent->bought_rlauncher == 0)
 		{
 			if (ent->money >= 60) {
 				ent->money -= 60;
-				bought_rlauncher = 1;
+				ent->bought_rlauncher = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought rocket launcher\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $60!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $60!\n");
 			}
 		}
 	}
+	//grenade launcher
 	else if (Q_stricmp(arg, "grenade launcher") == 0) {
-		if (bought_glauncher == 1) {
+		if (ent->bought_glauncher == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_glauncher == 0)
+		else if (ent->bought_glauncher == 0)
 		{
 			if (ent->money >= 70) {
 				ent->money -= 70;
-				bought_glauncher = 1;
+				ent->bought_glauncher = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought grenade launcher\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $70!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $70!\n");
 			}
 		}
 	}
+	//railgun
 	else if (Q_stricmp(arg, "railgun") == 0) {
-		if (bought_rgun == 1) {
+		if (ent->bought_rgun == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_rgun == 0)
+		else if (ent->bought_rgun == 0)
 		{
 			if (ent->money >= 80) {
 				ent->money -= 80;
-				bought_rgun = 1;
+				ent->bought_rgun = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought railgun\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $80!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $80!\n");
 			}
 		}
 	}
+	//bfg
 	else if (Q_stricmp(arg, "bfg10k") == 0) {
-		if (bought_bfg == 1) {
+		if (ent->bought_bfg == 1) {
 			gi.cprintf(ent, PRINT_HIGH, "You have this gun already!\n");
 			return;
 		}
-		else if (bought_bfg == 0)
+		else if (ent->bought_bfg == 0)
 		{
 			if (ent->money >= 90) {
 				ent->money -= 90;
-				bought_bfg = 1;
+				ent->bought_bfg = 1;
 				Cmd_Give_f(ent, arg);
 				gi.cprintf(ent, PRINT_HIGH, "bought bfg10k\n");
 			}
 			else {
-				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapons costs $90!\n");
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This weapon costs $90!\n");
+			}
+		}
+	}
+	//infantry
+	else if (Q_stricmp(arg, "infantry") == 0) {
+		if (ent->bought_infantry == 1) {
+			gi.cprintf(ent, PRINT_HIGH, "You have this strogg already!\n");
+			return;
+		}
+		else if (ent->bought_infantry == 0)
+		{
+			if (ent->money >= 15) {
+				ent->money -= 15;
+				ent->bought_infantry = 1;
+				gi.cprintf(ent, PRINT_HIGH, "bought infantry\n");
+			}
+			else {
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This strogg costs $15!\n");
+			}
+		}
+	}
+	//soldier
+	else if (Q_stricmp(arg, "soldier") == 0) {
+		if (ent->bought_soldier == 1) {
+			gi.cprintf(ent, PRINT_HIGH, "You have this strogg already!\n");
+			return;
+		}
+		else if (ent->bought_soldier == 0)
+		{
+			if (ent->money >= 25) {
+				ent->money -= 25;
+				ent->bought_soldier = 1;
+				gi.cprintf(ent, PRINT_HIGH, "bought soldier\n");
+			}
+			else {
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This strogg costs $25!\n");
+			}
+		}
+	}
+	//gunner
+	else if (Q_stricmp(arg, "gunner") == 0) {
+		if (ent->bought_gunner == 1) {
+			gi.cprintf(ent, PRINT_HIGH, "You have this strogg already!\n");
+			return;
+		}
+		else if (ent->bought_gunner == 0)
+		{
+			if (ent->money >= 35) {
+				ent->money -= 35;
+				ent->bought_gunner = 1;
+				gi.cprintf(ent, PRINT_HIGH, "bought gunner\n");
+			}
+			else {
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This strogg costs $35!\n");
+			}
+		}
+	}
+	//berserk
+	else if (Q_stricmp(arg, "berserk") == 0) {
+		if (ent->bought_berserk == 1) {
+			gi.cprintf(ent, PRINT_HIGH, "You have this strogg already!\n");
+			return;
+		}
+		else if (ent->bought_berserk == 0)
+		{
+			if (ent->money >= 45) {
+				ent->money -= 45;
+				ent->bought_berserk = 1;
+				gi.cprintf(ent, PRINT_HIGH, "bought berserk\n");
+			}
+			else {
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This strogg costs $45!\n");
+			}
+		}
+	}
+	//tank
+	else if (Q_stricmp(arg, "tank") == 0) {
+		if (ent->bought_tank == 1) {
+			gi.cprintf(ent, PRINT_HIGH, "You have this strogg already!\n");
+			return;
+		}
+		else if (ent->bought_tank == 0)
+		{
+			if (ent->money >= 55) {
+				ent->money -= 55;
+				ent->bought_tank = 1;
+				gi.cprintf(ent, PRINT_HIGH, "bought tank\n");
+			}
+			else {
+				gi.cprintf(ent, PRINT_HIGH, "you're broke! This strogg costs $55!\n");
 			}
 		}
 	}

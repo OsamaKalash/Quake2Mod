@@ -71,6 +71,8 @@ cvar_t	*flood_waitdelay;
 
 cvar_t	*sv_maplist;
 
+int framect = 0;
+
 void SpawnEntities (char *mapname, char *entities, char *spawnpoint);
 void ClientThink (edict_t *ent, usercmd_t *cmd);
 qboolean ClientConnect (edict_t *ent, char *userinfo);
@@ -374,6 +376,7 @@ void G_RunFrame (void)
 	// even the world gets a chance to think
 	//
 	ent = &g_edicts[0];
+
 	for (i=0 ; i<globals.num_edicts ; i++, ent++)
 	{
 		if (!ent->inuse)
@@ -396,16 +399,53 @@ void G_RunFrame (void)
 		if (i > 0 && i <= maxclients->value)
 		{
 			ClientBeginServerFrame (ent);
+			
+			//strogg gives money per second
+			if (framect == 10)
+			{
+				//infantry
+				if (ent->bought_infantry == 1)
+				{
+					ent->money += 1;
+				}
+				//soldier
+				if (ent->bought_soldier == 1)
+				{
+					ent->money += 5;
+				}
+				//gunner
+				if (ent->bought_gunner == 1)
+				{
+					ent->money += 10;
+				}
+				//berserk
+				if (ent->bought_berserk == 1)
+				{
+					ent->money += 15;
+				}
+				//tank
+				if (ent->bought_tank == 1)
+				{
+					ent->money += 20;
+				}
+				framect = 0;
+			}
+			else {
+				framect++;
+			}
+			
+			
 			continue;
 		}
-
+		
 		G_RunEntity (ent);
-	}
 
+	}
 	// see if it is time to end a deathmatch
 	CheckDMRules ();
 
 	// build the playerstate_t structures for all players
 	ClientEndServerFrames ();
+
 }
 

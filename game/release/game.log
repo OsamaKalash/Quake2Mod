@@ -1,61 +1,7 @@
-﻿  g_cmds.c
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(24,13): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(24,16): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(25,18): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(25,21): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(26,13): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(26,16): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(27,13): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(27,16): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(28,17): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(28,20): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(29,18): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(29,21): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(30,18): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(30,21): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(31,13): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(31,16): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(32,12): warning C4431: missing type specifier - int assumed. Note: C no longer supports default-int
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(32,15): warning C4218: nonstandard extension used: must specify at least a storage class or a type
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(44,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(67,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(68,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(732,11): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(735,10): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(818,10): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(819,10): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(820,10): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(831,9): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(838,8): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(885,13): warning C4459: declaration of 'st' hides global declaration
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_local.h(456,21): message : see declaration of 'st'
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(907,9): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(895,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(903,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(928,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(947,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(966,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(985,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(1004,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(1023,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(1041,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(1059,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\g_cmds.c(1077,21): warning C4020: 'Cmd_Give_f': too many actual parameters
-  p_client.c
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(75,42): warning C4100: 'self': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(184,66): warning C4100: 'damage': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(184,56): warning C4100: 'kick': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(184,43): warning C4100: 'other': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(184,28): warning C4100: 'self': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(216,46): warning C4100: 'inflictor': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(506,91): warning C4100: 'point': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(937,89): warning C4100: 'point': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(937,60): warning C4100: 'attacker': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(937,40): warning C4100: 'inflictor': unreferenced formal parameter
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(1376,10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(1381,2): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_client.c(1421,2): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Generating Code...
+﻿  p_hud.c
+C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_hud.c(234,11): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_hud.c(245,10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_hud.c(426): warning C4701: potentially uninitialized local variable 'cells' used
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetPath(C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\release\game.dll) does not match the Linker's OutputFile property value (C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\release\gamex86.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1365,5): warning MSB8012: TargetName(game) does not match the Linker's OutputFile property value (gamex86). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      Creating library .\..\release\gamex86.lib and object .\..\release\gamex86.exp

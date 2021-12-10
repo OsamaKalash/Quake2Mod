@@ -1069,8 +1069,14 @@ struct edict_s
 	int bought_glauncher;
 	int bought_rgun;
 	int bought_bfg;
-	
 
+	//strogg buy variables
+	int bought_infantry;
+	int bought_soldier;
+	int bought_berserk;
+	int bought_tank;
+	int bought_gunner;
+	
 	float		powerarmor_time;
 
 	char		*map;			// target_changelevel

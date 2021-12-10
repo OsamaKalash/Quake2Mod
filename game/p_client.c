@@ -1750,15 +1750,17 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
 
 	//gives money per second
 	
-	if (fcount == 300)
+	/*
+	if (fcount == 60 && ent->bought_sgun == 1)
 	{
 		ent->money += 20;
 		fcount = 0;
+		
 	}
 	else {
 		fcount++;
 	}
-	
+	*/
 	
 }
 
