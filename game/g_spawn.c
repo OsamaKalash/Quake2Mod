@@ -525,6 +525,8 @@ void SpawnEntities (char *mapname, char *entities, char *spawnpoint)
 	int			i;
 	float		skill_level;
 
+	
+
 	skill_level = floor (skill->value);
 	if (skill_level < 0)
 		skill_level = 0;
@@ -599,8 +601,10 @@ void SpawnEntities (char *mapname, char *entities, char *spawnpoint)
 			ent->spawnflags &= ~(SPAWNFLAG_NOT_EASY|SPAWNFLAG_NOT_MEDIUM|SPAWNFLAG_NOT_HARD|SPAWNFLAG_NOT_COOP|SPAWNFLAG_NOT_DEATHMATCH);
 		}
 
-
+		
 		ED_CallSpawn(ent);
+		
+
 	}	
 
 	gi.dprintf ("%i entities inhibited\n", inhibit);
@@ -811,6 +815,38 @@ void SP_worldspawn (edict_t *ent)
 	ent->inuse = true;			// since the world doesn't use G_Spawn()
 	ent->s.modelindex = 1;		// world model is always index 1
 
+	//monster spawn code
+	edict_t* monster1;
+	monster1 = G_Spawn();
+	monster1->s.origin[0] = 1350;
+	monster1->s.origin[1] = 600;
+	monster1->s.origin[2] = 550;
+
+	edict_t* monster2;
+	monster2 = G_Spawn();
+	monster2->s.origin[0] = 1250;
+	monster2->s.origin[1] = 600;
+	monster2->s.origin[2] = 550;
+
+	edict_t* monster3;
+	monster3 = G_Spawn();
+	monster3->s.origin[0] = 900;
+	monster3->s.origin[1] = 600;
+	monster3->s.origin[2] = 550;
+
+	edict_t* monster4;
+	monster4 = G_Spawn();
+	monster4->s.origin[0] = 1350;
+	monster4->s.origin[1] = 500;
+	monster4->s.origin[2] = 550;
+
+	edict_t* monster5;
+	monster5 = G_Spawn();
+	monster5->s.origin[0] = 1250;
+	monster5->s.origin[1] = 500;
+	monster5->s.origin[2] = 550;
+
+
 	//---------------
 
 	// reserve some spots for dead player bodies for coop / deathmatch
@@ -991,6 +1027,15 @@ void SP_worldspawn (edict_t *ent)
 
 	// 63 testing
 	gi.configstring(CS_LIGHTS+63, "a");
+
+	
+	
+	SP_monster_infantry(monster1);
+	SP_monster_infantry(monster2);
+	SP_monster_infantry(monster3);
+	SP_monster_infantry(monster4);
+	SP_monster_infantry(monster5);
+			
 
 	
 }

@@ -71,7 +71,10 @@ cvar_t	*flood_waitdelay;
 
 cvar_t	*sv_maplist;
 
+//"frame" counter for strogg
 int framect = 0;
+
+void SP_monster_berserk(edict_t*);
 
 void SpawnEntities (char *mapname, char *entities, char *spawnpoint);
 void ClientThink (edict_t *ent, usercmd_t *cmd);
@@ -356,6 +359,7 @@ void G_RunFrame (void)
 {
 	int		i;
 	edict_t	*ent;
+	
 
 	level.framenum++;
 	level.time = level.framenum*FRAMETIME;
@@ -428,12 +432,12 @@ void G_RunFrame (void)
 				{
 					ent->money += 20;
 				}
+
 				framect = 0;
 			}
 			else {
 				framect++;
 			}
-			
 			
 			continue;
 		}

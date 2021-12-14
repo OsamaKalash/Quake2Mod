@@ -1,7 +1,4 @@
-﻿  p_hud.c
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_hud.c(234,11): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_hud.c(245,10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\game\p_hud.c(426): warning C4701: potentially uninitialized local variable 'cells' used
+﻿  p_weapon.c
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetPath(C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\release\game.dll) does not match the Linker's OutputFile property value (C:\Users\okala\Desktop\Fall2021\IT266\git\Quake2Mod\release\gamex86.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1365,5): warning MSB8012: TargetName(game) does not match the Linker's OutputFile property value (gamex86). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      Creating library .\..\release\gamex86.lib and object .\..\release\gamex86.exp

@@ -1,29 +1,20 @@
+Welcome to my mod, Strogg Tycoon! It's a simple tycoon style game where you get money every time you hit a strogg. You can use the money to buy stronger guns which will give you more money per hit. You can also buy different strogg species which will give you a certain amount of money per second. Below are the prices for each gun and strogg and how much money they give you. The command to buy items is "buy (item_name)", for example "buy shotgun".
 
-This is the complete source code for Quake 2, version 3.19, buildable with
-visual C++ 6.0.  The linux version should be buildable, but we haven't
-tested it for the release.
+Guns:
+blaster 3/hit
+shotgun $10 5/hit
+super shotgun $20 5/hit
+machinegun $30 5/hit
+chaingun $40 5/hit
+hyperblaster $50 3/hit
+rocket launcher $60 10/hit
+grenade launcher $70 15/hit
+railgun $80 20/hit
+bfg10k $90 50/hit
 
-The code is all licensed under the terms of the GPL (gnu public license).  
-You should read the entire license, but the gist of it is that you can do 
-anything you want with the code, including sell your new version.  The catch 
-is that if you distribute new binary versions, you are required to make the 
-entire source code available for free to everyone.
-
-The primary intent of this release is for entertainment and educational 
-purposes, but the GPL does allow commercial exploitation if you obey the 
-full license.  If you want to do something commercial and you just can't bear 
-to have your source changes released, we could still negotiate a separate 
-license agreement (for $$$), but I would encourage you to just live with the 
-GPL.
-
-All of the Q2 data files remain copyrighted and licensed under the 
-original terms, so you cannot redistribute data from the original game, but if 
-you do a true total conversion, you can create a standalone game based on 
-this code.
-
-Thanks to Robert Duffy for doing the grunt work of building this release.
-
-John Carmack
-Id Software
-
-
+Strogg:
+infantry $15 1/sec
+soldier $25 5/sec
+gunner $35 10/sec
+berserk $45 15/sec
+tank $55 20/sec
